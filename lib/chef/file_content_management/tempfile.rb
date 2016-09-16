@@ -73,6 +73,7 @@ class Chef
 
       # this is similar to File.extname() but greedy about the extension (from the first dot, not the last dot)
       def tempfile_extension
+        puts "TESTING TO MAKE SURE KITCHEN-APPBUNDLE-UPDATER IS NOT BUSTED"
         # complexity here is due to supporting mangling non-UTF8 strings (e.g. latin-1 filenames with characters that are illegal in UTF-8)
         b = File.basename(@new_resource.path)
         i = b.index(".")
